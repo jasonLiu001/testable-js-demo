@@ -1,5 +1,14 @@
-function detail() {
+ï»¿function detail(opts) {
+    //å±æ€§
+    this.userId = opts.userId;
+    //å…¶ä»–å±æ€§
 }
+
+//æ–¹æ³•
+detail.prototype.showMoreDetail = function () {
+
+};
+//å…¶ä»–åˆ·æ–°
 
 
 detail.prototype.init = function () {
@@ -16,7 +25,7 @@ detail.prototype.init = function () {
 };
 
 detail.prototype.initData = function (data) {
-    //»Øµ÷º¯Êı
+    //å›è°ƒå‡½æ•°
 };
 
 detail.prototype.addBtnSureHanlder = function () {
@@ -27,18 +36,36 @@ detail.prototype.addBtnSureHanlder = function () {
 };
 
 detail.prototype.btnSureHandler = function () {
-    //clickÊÂ¼ş´¦Àíº¯Êı
+    //clickäº‹ä»¶å¤„ç†å‡½æ•°
 };
 
 detail.prototype.loadMore = function () {
     var self = this;
 
     function getMore() {
-        //·½·¨ÊµÏÖ
+        //æ–¹æ³•å®ç°
     }
 
 };
 
 detail.prototype.pageRedirect = function () {
-
+    if (æ¡ä»¶ä¸€) {
+        window.location.href = '//h5.ycapp.yiche.com/PublicTest/index';
+    } else if (æ¡ä»¶äºŒ) {
+        window.location.href = '//h5.ycapp.yiche.com/PublicTest/Detail?id=1';
+    } else {
+        window.location.href = '//h5.ycapp.yiche.com/PublicTest/UploadSuccess?publicTestId=1';
+    }
 };
+
+detail.prototype.getRedirectUrl = function () {
+    if (æ¡ä»¶ä¸€) {
+        window.location.href = '//h5.ycapp.yiche.com/PublicTest/index';
+    } else if (æ¡ä»¶äºŒ) {
+        window.location.href = '//h5.ycapp.yiche.com/PublicTest/Detail?id=1';
+    } else {
+        window.location.href = '//h5.ycapp.yiche.com/PublicTest/UploadSuccess?publicTestId=1';
+    }
+};
+
+
